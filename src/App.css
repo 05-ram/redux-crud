@@ -1,0 +1,28 @@
+html body {
+    color           : #A7A1AE;
+    background-color: #1F2739;
+    padding-top     : 100px;
+}
+
+
+.glbl-tbl {
+    max-width: 800px;
+    margin   : auto;
+}
+
+.glbl-tbl table th {
+    color           : #FB667A;
+    background-color: transparent;
+}
+
+.glbl-tbl table tbody td {
+    color: #A7A1AE;
+}
+
+.glbl-tbl tr:nth-child(odd) td {
+    background-color: #323C50 !important;
+}
+
+.glbl-tbl tr:nth-child(even) td {
+    background-color: #2C3446 !important;
+}

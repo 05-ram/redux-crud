@@ -28,9 +28,11 @@ const Home = () => {
                         }
                     </tbody>
                 </Table>
-                <Link to={"/create"} className='d-flex justify-content-end'>
-                    <Button variant='success'>Create</Button>
-                </Link>
+                <div className='d-flex justify-content-end'>
+                    <Link to={"/create"} >
+                        <Button variant='success'>Create</Button>
+                    </Link>
+                </div>
             </div>
         </>
     )

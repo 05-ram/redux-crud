@@ -3,9 +3,6 @@ import users from "./Users";
 import { Button, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const Home = () => {
-    const handleCreate = () => {
-
-    }
     return (
         <>
             <div className='glbl-tbl'>
@@ -32,7 +29,7 @@ const Home = () => {
                     </tbody>
                 </Table>
                 <Link to={"/create"} className='d-flex justify-content-end'>
-                    <Button variant='success' onClick={handleCreate}>Create</Button>
+                    <Button variant='success'>Create</Button>
                 </Link>
             </div>
         </>

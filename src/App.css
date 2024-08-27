@@ -1,17 +1,18 @@
 html body {
-    color           : #A7A1AE;
+    color: #A7A1AE;
     background-color: #1F2739;
-    padding-top     : 100px;
+    padding-top: 100px;
 }
 
 
-.glbl-tbl {
+.glbl-tbl,
+.create-form {
     max-width: 800px;
-    margin   : auto;
+    margin: auto;
 }
 
 .glbl-tbl table th {
-    color           : #FB667A;
+    color: #FB667A;
     background-color: transparent;
 }
 
@@ -25,4 +26,17 @@ html body {
 
 .glbl-tbl tr:nth-child(even) td {
     background-color: #2C3446 !important;
+}
+
+input {
+    width: 100%;
+    height: 44px;
+    background-color: unset;
+    border: 1px solid #fff;
+    padding-left: 16px;
+    color: #fff;
+}
+
+label {
+    font-weight: 600;
 }

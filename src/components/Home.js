@@ -6,6 +6,13 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const [users, setUsers] = useState(initialUsers);
 
+    const setValue = (id, name, skill, mobile) => {
+        localStorage.setItem("id", id);
+        localStorage.setItem("name", name);
+        localStorage.setItem("skill", skill);
+        localStorage.setItem("mobile", mobile);
+    }
+
     const handleDelete = (id) => {
         setUsers(users.filter(user => user.id !== id));
     }
@@ -23,7 +30,7 @@ const Home = () => {
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody> 
                         {
                             users.map((user) => (
                                 <tr key={user.id}>
@@ -33,12 +40,12 @@ const Home = () => {
                                     <td>{user.mobile}</td>
                                     <td>
                                         <div className='d-flex gap-3 justify-content-center'>
-                                            <Link to={`/edit/${user.id}`}>
-                                                <Button variant='secondary'>Edit</Button>
+                                            <Link to={`/edit`}>
+                                                <Button variant='secondary' onClick={() => setValue(user.id, user.name, user.skill, user.mobile)}>Edit</Button>
                                             </Link>
-                                            <Button 
-                                                variant='danger' 
-                                                className='ml-2' 
+                                            <Button
+                                                variant='danger'
+                                                className='ml-2'
                                                 onClick={() => handleDelete(user.id)}
                                             >
                                                 Delete
